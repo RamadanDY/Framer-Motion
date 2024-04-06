@@ -18,7 +18,7 @@ const containerVariants = {
     transition: { type: "spring", delay: 1.5 },
   },
 };
-
+// this is the next variants
 const nextVariants = {
   hidden: {
     initial: { x: "-100vw" },

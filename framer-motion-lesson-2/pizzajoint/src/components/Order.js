@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 // 2.number two explains animation of the dom removal of a div and animate it
 //2. so we import the AnimatePresence property and use a useState to remove and edit it
-// import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const containerVariants = {
   hidden: {
@@ -43,19 +43,6 @@ const childrenVariants = {
   },
 };
 const Order = ({ pizza }) => {
-  //2. using the usestate to delete a div
-  //  the showTitle is gonna be a boolean t/f
-  // the setShowtitle is a function that toogles the value of showTitle
-  // and we make the initial value to true
-  const [showTitle, setShowtitle] = useState(true);
-  // to time when we want to delete it we use the setTimeout
-  //  it runs after 4secs
-  setTimeout(() => {
-    // this is set because when we load the pg we want to see the div
-    // but after 4secs we want it to be false
-    setShowtitle(false);
-  }, 4000);
-
   return (
     <motion.div
       className="container order"
@@ -64,7 +51,6 @@ const Order = ({ pizza }) => {
       animate="visible"
     >
       <h2>Thank you for your order :)</h2>
-
       <motion.p variants={childrenVariants}>
         You ordered a {pizza.base} pizza with:
       </motion.p>

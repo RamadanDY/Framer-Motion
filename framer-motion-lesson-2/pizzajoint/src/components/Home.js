@@ -33,11 +33,11 @@ const containerVariants = {
   },
   visible: {
     opacity: 1,
-    transition: { delay: 0.7, duration: 1.5 },
+    transition: { delay: 1.5, duration: 1.5 },
   },
   exit: {
-    x: "-100vw",
-    transition: { ease: "easeInOut" },
+    x: "-100vh",
+    // transition: { ease: "easeInOut" },
   },
 };
 const Home = () => {
@@ -47,7 +47,7 @@ const Home = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      exit="exit"
+      // exit="exit"
     >
       <motion.h2 animate={{}}>Welcome to Pizza Joint</motion.h2>
       <Link to="/base">
